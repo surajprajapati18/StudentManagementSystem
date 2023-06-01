@@ -8,24 +8,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 	@GetMapping("/public")
-	public String home()
-	{
+	public String home() {
 		return "public";
 	}
-	
+
 	@PreAuthorize("hasRole('normal')")
 	@GetMapping("/normal")
-	public String normal()
-	{
+	public String normal() {
 		return "normal";
 	}
-	
+
 	@PreAuthorize("hasRole('admin')")
 	@GetMapping("/admin")
-	public String admin()
-	{
+	public String admin() {
 		return "admin";
 	}
-	
-	
+
 }
