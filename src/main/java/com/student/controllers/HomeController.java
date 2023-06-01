@@ -9,9 +9,6 @@ public class HomeController {
 
 	@GetMapping("/public")
 	public String home() {
-		
-		System.out.println("i am suraj");
-		
 		System.out.println("i am running");
 		return "public";
 	}
